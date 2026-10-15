@@ -22,16 +22,36 @@ public class MembroEstabelecimento extends TenantEntity {
     @Column(name = "ativo")
     private Boolean ativo;
 
-    public Usuario getUsuario() { return usuario; }
-    public void setUsuario(Usuario usuario) { this.usuario = usuario; }
+    public Usuario getUsuario() {
+        return usuario;
+    }
 
-    public PapelMembro getPapel() { return papel; }
-    public void setPapel(PapelMembro papel) { this.papel = papel; }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
-    public Boolean getAtendeClientes() { return atendeClientes; }
-    public void setAtendeClientes(Boolean atendeClientes) { this.atendeClientes = atendeClientes; }
+    public PapelMembro getPapel() {
+        return papel;
+    }
 
-    public Boolean getAtivo() { return ativo; }
-    public void setAtivo(Boolean ativo) { this.ativo = ativo; }
+    public void setPapel(PapelMembro papel) {
+        this.papel = papel;
+    }
+
+    public Boolean getAtendeClientes() {
+        return atendeClientes;
+    }
+
+    public void setAtendeClientes(Boolean atendeClientes) {
+        this.atendeClientes = atendeClientes;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
 
 }
