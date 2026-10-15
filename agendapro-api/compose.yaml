@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: agendapro-postgres
+    environment:
+      POSTGRES_DB: agendapro
+      POSTGRES_USER: agendapro
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-agendapro_dev}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - agendapro_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agendapro -d agendapro"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+volumes:
+  agendapro_pgdata:
